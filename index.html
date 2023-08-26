@@ -8,6 +8,13 @@
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             padding: 20px;
+            /* Remove or comment out these lines */
+            /* filter: blur(8px); */
+            /* -webkit-filter: blur(8px); */
+            /* Center and scale the image nicely */
+            background-position:center;
+            background-repeat:no-repeat;
+            background-size:cover;
         }
 
         .student {
@@ -27,6 +34,7 @@
             padding: 20px;
             margin-bottom: 20px;
             border-radius: 5px;
+            text-align: center;
         }
 
         .info h2 {
@@ -49,6 +57,15 @@
             .student, .info {
                 padding: 10px;
             }
+
+            .bubble {
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                font-size: 14px;
+                text-align: center;
+                box-sizing: border-box;
+             }
         }
 
         @keyframes fadeInUp {
@@ -57,51 +74,147 @@
                 transform: translateY(0);
             }
         }
+
+        .trophy {
+          display: inline-block;
+          width: 50px;
+          height: auto;
+          margin-right: 10px;
+          vertical-align: middle;
+          float:left;
+        }
+
+        .student:nth-child(1) .trophy {
+          content: url("gold.png");
+        }
+
+        .student:nth-child(2) .trophy {
+          content: url("silver.png");
+        }
+
+        .student:nth-child(3) .trophy {
+          content: url("bronze.png");
+        }
+
+         details {
+          margin-top: 10px;
+          width: 100%;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          padding-left: 15px;
+          background-color:#607d8bdb;
+          border-radius:5px;
+          cursor:pointer;
+         }
+
+         summary {
+           color:white;
+           font-size:22px;
+           outline:none;
+         }
+
+         summary::-webkit-details-marker {
+           display:none;
+         }
+
+         summary::before {
+           content:"\25B6";
+           color:white;
+           font-size:22px;
+           margin-right:10px;
+         }
+
+         details[open] summary::before {
+           content:"\25BC";
+         }
+
+         details p {
+           font-size:18px;
+           margin-left:30px;
+         }
+
+         .show {
+           display:block;
+         }
+
+         /* Add some CSS code to change the color of the first 16 boxes in some light gradient */
+
+         /* Use the nth-child selector with a range of values to target the first 16 student elements */
+         .student:nth-child(-n+16) {
+             /* Use a linear gradient as the background image with two light colors */
+             background-image: linear-gradient(to right, lightpink, lightblue);
+             /* Add a transition effect for the background image */
+             transition: background-image 0.5s ease-in-out;
+         }
+
+         /* Add a hover effect to change the gradient direction when the mouse is over the box */
+         .student:nth-child(-n+16):hover {
+             background-image: linear-gradient(to bottom, lightpink, lightblue);
+         }
+
+         /* Add some CSS code to increase the size of the images of gold, silver and bronze */
+
+         /* Use the nth-child selector with specific values to target the first three student elements */
+         .student:nth-child(1) .trophy, /* Select the first student element and its trophy child element */
+         .student:nth-child(2) .trophy, /* Select the second student element and its trophy child element */
+         .student:nth-child(3) .trophy  /* Select the third student element and its trophy child element */ {
+             /* Increase the width of the trophy element */
+             width: 80px;
+             /* Add a transition effect for the width */
+             transition: width 0.5s ease-in-out;
+         }
+
+         /* Add a hover effect to increase the width even more when the mouse is over the box */
+         .student:nth-child(1):hover .trophy,
+         .student:nth-child(2):hover .trophy,
+         .student:nth-child(3):hover .trophy {
+             width: 100px;
+         }
     </style>
 </head>
 <body>
 <div id="student-info"></div>
 
 <script>
-    var questions = [
-        "What do you mean by Research?",
-        "What do you mean by Research Mindset?",
-        "If you have all the resources and knowledge, what will be your Research Motivation / Inspiration / Idea based on?",
-        "The research statement you mentioned earlier is based on what subdomain or field of AI/ML ?",
-        "Why do you want to pursue Research?",
-        "What is the level of your seriousness about pursuing Research?",
-        "What is the level of your seriousness about this program?",
-        "You agree that you will complete this mentorship program seriously and sincerely."
-    ];
 
     fetch('studentData.json')
         .then(response => response.json())
         .then(data => {
-            data.sort((a, b) => b.final_score - a.final_score); // Sort students by final score
+           // Sort students by percentile in descending order
+           data.sort((a, b) => b.perc - a.perc);
 
-            data.forEach(function (student, index) {
+           // Add a variable to store the total number of students
+           var totalStudents = data.length;
+
+           data.forEach(function (student, index) {
                 var studentDiv = document.createElement('div');
                 studentDiv.className = 'student';
                 studentDiv.style.animationDelay = index * 100 + 'ms';
                 var infoDiv = document.createElement('div');
                 infoDiv.className = 'info';
-                var responsesDiv = document.createElement('div');
 
-                infoDiv.innerHTML = "<h2>Rank " + (index + 1) + ": " + student.name + "</h2>" +
+                infoDiv.innerHTML = "<span class='trophy'></span><h2>" + student.name + "</h2>" +
                     "<p>Email: " + student.email + "</p>" +
-                    "<p>Round-2 Score: <span class='bubble'>" + student.final_score + "</span></p>";
 
-                responsesDiv.innerHTML = "<h3>Responses</h3>";
-                for (var i = 1; i <= 8; i++) {
-                    responsesDiv.innerHTML += "<p><strong>" + questions[i - 1] + "</strong><br>" + student["response" + i] + "</p>";
+
+                    "<p>Percentile: <span class='bubble'>" + student.perc + "</span></p>";
+
+                var detailsDiv = document.createElement('details');
+                var summaryDiv = document.createElement('summary');
+                summaryDiv.textContent = student.name;
+                detailsDiv.appendChild(summaryDiv);
+                detailsDiv.appendChild(infoDiv);
+
+                if (index < 16) {
+                  detailsDiv.classList.add('show');
+                  detailsDiv.setAttribute('open', true);
                 }
 
-                studentDiv.appendChild(infoDiv);
-                studentDiv.appendChild(responsesDiv);
+                studentDiv.appendChild(detailsDiv);
                 document.getElementById("student-info").appendChild(studentDiv);
-            });
-        })
-        .catch(error => console.error('Error:', error));
+           });
+       })
+       .catch(error => console.error('Error:', error));
 </script>
 </body>
 </html>
