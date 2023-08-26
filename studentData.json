@@ -61,7 +61,7 @@
   "response8": "true",
   "final_score": 37,
   "reg_email": "21f1005296@ds.study.iitm.ac.in",
-  "perc": 99.2
+  "perc": 99
  },
  {
   "name": "Borishan Ghosh",
@@ -141,7 +141,7 @@
   "response8": "true",
   "final_score": 34,
   "reg_email": "23f1001866@ds.study.iitm.ac.in",
-  "perc": 94.9
+  "perc": 93.8
  },
  {
   "name": "RAJIB BANERJEE",
@@ -157,7 +157,7 @@
   "response8": "true",
   "final_score": 34,
   "reg_email": "21f1000489@ds.study.iitm.ac.in",
-  "perc": 91.5
+  "perc": 92.3
  },
  {
   "name": "GAJULA KARTHIK KUMAR",
@@ -189,7 +189,7 @@
   "response8": "true",
   "final_score": 34,
   "reg_email": "21f1003487@ds.study.iitm.ac.in",
-  "perc": 91.3
+  "perc": 91
  },
  {
   "name": "Devansh Rathor",
@@ -397,7 +397,7 @@
   "response8": "true",
   "final_score": 30,
   "reg_email": "21f1002549@ds.study.iitm.ac.in",
-  "perc": 81.7
+  "perc": 81
  },
  {
   "name": "PARASHMANI DATTA",
@@ -413,7 +413,7 @@
   "response8": "true",
   "final_score": 30,
   "reg_email": "21f2000987@ds.study.iitm.ac.in",
-  "perc": 81.7
+  "perc": 81
  },
  {
   "name": "Vani R",
@@ -509,7 +509,7 @@
   "response8": "true",
   "final_score": 29,
   "reg_email": "21f1001738@ds.study.iitm.ac.in",
-  "perc": 73.1
+  "perc": 73.4
  },
  {
   "name": "Akash Sharma",
@@ -669,7 +669,7 @@
   "response8": "true",
   "final_score": 28,
   "reg_email": "22f3001428@ds.study.iitm.ac.in",
-  "perc": 64.3
+  "perc": 64
  },
  {
   "name": "Samridhi Raj",
@@ -701,7 +701,7 @@
   "response8": "true",
   "final_score": 28,
   "reg_email": "21f1004948@ds.study.iitm.ac.in",
-  "perc": 62.9
+  "perc": 62.6
  },
  {
   "name": "SUBHADEEP CHAKRABORTY",
@@ -765,7 +765,7 @@
   "response8": "true",
   "final_score": 27,
   "reg_email": "21f2001272@ds.study.iitm.ac.in",
-  "perc": 61.2
+  "perc": 61.5
  },
  {
   "name": "Dary Kevin",
@@ -877,7 +877,7 @@
   "response8": "true",
   "final_score": 25,
   "reg_email": "rajesh.kalyanaraman.logic@gmail.com",
-  "perc": 53.1
+  "perc": 52.2
  },
  {
   "name": "PRINCE KUMAR",
@@ -973,7 +973,7 @@
   "response8": "true",
   "final_score": 24,
   "reg_email": "22f3000797@ds.study.iitm.ac.in",
-  "perc": 47.6
+  "perc": 47.7
  },
  {
   "name": "Vaibhav Satish",
@@ -989,7 +989,7 @@
   "response8": "true",
   "final_score": 24,
   "reg_email": "vaibhavsatish9@gmail.com",
-  "perc": 47.4
+  "perc": 47.7
  },
  {
   "name": "KABIR JAMADAR",
@@ -1133,7 +1133,7 @@
   "response8": "true",
   "final_score": 22,
   "reg_email": "21f2001126@ds.study.iitm.ac.in",
-  "perc": 34.4
+  "perc": 34.6
  },
  {
   "name": "MUKESH KUMAR",
@@ -1149,7 +1149,7 @@
   "response8": "true",
   "final_score": 22,
   "reg_email": "21f1000350@ds.study.iitm.ac.in",
-  "perc": 34.1
+  "perc": 34.6
  },
  {
   "name": "Anjali Gupta",
@@ -1357,7 +1357,7 @@
   "response8": "true",
   "final_score": 18,
   "reg_email": "ronitnarayan123@gmail.com",
-  "perc": 21.5
+  "perc": 21.8
  },
  {
   "name": "POOJA PANDEY",
@@ -1373,7 +1373,7 @@
   "response8": "true",
   "final_score": 17,
   "reg_email": "21f3000484@ds.study.iitm.ac.in",
-  "perc": 21.4
+  "perc": 21.8
  },
  {
   "name": "Sanjeev Sah",
@@ -1421,6 +1421,6 @@
   "response8": "true",
   "final_score": 15,
   "reg_email": "23f1003028@ds.study.iitm.ac.in",
-  "perc": 20.8
+  "perc": 20
  }
 ]
