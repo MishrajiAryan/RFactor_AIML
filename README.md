@@ -4,13 +4,10 @@
 
 The RFactor AIML Results Portal is a comprehensive web application designed to display and manage results from AI/ML quiz competitions organized by RaSoR (Research and Solutions for Robotics). This platform provides an intuitive interface for viewing individual submissions, rankings, and detailed performance analytics.
 
-## Live Demo
-
-**🌐 [View Live Application](https://rfactor-aiml-result.vercel.app/)**
-
 ## Features
 
 ### Core Functionality
+
 - **Results Dashboard**: Clean, organized display of quiz results and participant rankings
 - **Individual Profiles**: Detailed view of each participant's performance and submissions
 - **Medal System**: Visual recognition with gold, silver, and bronze medal awards
@@ -18,10 +15,10 @@ The RFactor AIML Results Portal is a comprehensive web application designed to d
 - **Data Persistence**: SQLite database integration for reliable data storage
 
 ### Technical Highlights
+
 - Modern HTML5 structure with semantic markup
 - Custom medal graphics and visual assets
 - JSON-based data management for flexible content updates
-- Deployment-ready configuration for Vercel hosting
 
 ## Project Structure
 
@@ -43,46 +40,40 @@ RFactor_AIML/
 - **Frontend**: HTML5, CSS3, JavaScript
 - **Database**: SQLite
 - **Data Format**: JSON
-- **Deployment**: Vercel
 - **Development**: IntelliJ IDEA
 
 ## Getting Started
 
 ### Prerequisites
+
 - Modern web browser with JavaScript support
 - Local web server (optional, for development)
 
 ### Installation
 
-1. **Clone the repository**
+1. Clone the repository
    ```bash
    git clone https://github.com/MishrajiAryan/RFactor_AIML.git
    cd RFactor_AIML
    ```
 
-2. **Open the application**
+2. Open the application
    - Open `index.html` directly in your browser, or
    - Use a local development server for enhanced features
 
-3. **View results**
+3. View results
    - Navigate through the interface to explore participant results
    - Check individual performance metrics and rankings
 
 ## Data Management
 
 ### Student Data Format
+
 The `studentData.json` file contains structured information about participants and their quiz performance. This format allows for easy updates and maintenance of results data.
 
 ### Database Integration
+
 The SQLite database (`rfactor_aiml.sqlite`) provides persistent storage for more complex queries and data relationships.
-
-## Deployment
-
-This application is configured for seamless deployment on Vercel:
-
-1. **Automatic Deployment**: Connected to this GitHub repository for continuous deployment
-2. **Production URL**: [rfactor-aiml-result.vercel.app](https://rfactor-aiml-result.vercel.app/)
-3. **Environment**: Optimized for production with CDN delivery
 
 ## Contributing
 
@@ -96,7 +87,7 @@ Contributions to improve the RFactor AIML Results Portal are welcome:
 
 ## About RaSoR
 
-This project is part of the RaSoR (Research and Solutions for Robotics) initiative, focusing on promoting AI/ML education through interactive competitions and assessments.
+RaSoR (Research and Solutions for Robotics) is a student-run society at IIT Madras dedicated to advancing robotics, artificial intelligence, and machine learning. The group organizes hackathons, coding challenges, and quizzes with real-world applications, fostering technical leadership among students. RaSoR's initiatives help bridge the gap between theoretical learning and practical experience, building a vibrant AI/ML community on campus.
 
 ## License
 
@@ -105,9 +96,7 @@ This project is open source and available under standard GitHub terms.
 ## Contact
 
 For questions, suggestions, or support:
-- **Repository**: [github.com/MishrajiAryan/RFactor_AIML](https://github.com/MishrajiAryan/RFactor_AIML)
-- **Live Application**: [rfactor-aiml-result.vercel.app](https://rfactor-aiml-result.vercel.app/)
 
----
+- Repository: [github.com/MishrajiAryan/RFactor_AIML](https://github.com/MishrajiAryan/RFactor_AIML)
 
-**Built with ❤️ for the AI/ML community**
+Built with ❤️ for the AI/ML community
